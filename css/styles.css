@@ -1,0 +1,487 @@
+/*=== Import Files ===*/
+/* Colors used in the site 
+----------------------------------*/
+/* Start Prefix Mixin
+----------------------------------*/
+/*End*/
+/* Start Line Hight
+----------------------------------*/
+/*End*/
+/* Start Prop - Input
+----------------------------------*/
+/*End*/
+/* Cursor Pointer
+----------------------------------*/
+/*End*/
+/* Float Pointer
+----------------------------------*/
+/*End*/
+/* Fonts Pointer
+----------------------------------*/
+/*End*/
+/* Position Pointer
+----------------------------------*/
+/*End*/
+/* Special Mixin - Icon Box And 
+Ul Box - (emp-list - emp-fav)
+----------------------------------*/
+/*End*/
+/* Start I Tag Hover
+----------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500");
+i.fa-heart:hover {
+  color: #fb617f; }
+
+i.fa-exclamation-triangle:hover {
+  color: orange; }
+
+i.fa-pen:hover {
+  color: #4680ff; }
+
+/*End*/
+/*End*/
+/*=== Start Scrollbar ===*/
+::-webkit-scrollbar {
+  width: 5px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #4680ff; }
+
+/*End*/
+/*=== Start Body ===*/
+body {
+  position: relative; }
+
+body {
+  background-color: #f6f7fb;
+  overflow: hidden; }
+
+/*End*/
+/*=== Start Extend ===*/
+.disFlex, header section.right-box, section.content .color-box .control-box .edit-box {
+  display: flex; }
+
+.paddingProp, section.content .emp-list .add-box, section.content .color-box .control-box {
+  padding: 30px; }
+
+header section.right-box .user-box .photo-box, section.content .emp-list .add-box, section.content .color-box {
+  overflow: hidden; }
+
+section.login-page .login-box #login-form input, section.content .emp-list .add-box, section.content .color-box .control-box, section.content .color-box .control-box .edit-box div input {
+  border-radius: 3px; }
+
+header section.left-box .search form input::placeholder, section.content .emp-list ul li .icon-tools {
+  color: #e0e4e7; }
+
+.cursor, section.login-page .login-box #login-form input[type="submit"], header section.right-box .menu-box .logout {
+  cursor: pointer; }
+
+/*End*/
+/*=== Start Login Page ===*/
+section.login-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f7fb;
+  z-index: 9999; }
+  section.login-page .login-box {
+    margin-top: 176px; }
+    section.login-page .login-box .nameLogo-group {
+      width: 293px;
+      text-align: center; }
+      section.login-page .login-box .nameLogo-group h1 {
+        margin-top: 27px;
+        text-transform: uppercase;
+        color: #626262;
+        font: 300 25px "Fira Sans"; }
+    section.login-page .login-box #login-form input {
+      display: block;
+      margin-top: 25px;
+      outline: 0;
+      border: 1px solid transparent;
+      text-transform: none;
+      color: #fff;
+      font: 300 16px "Fira Sans"; }
+      section.login-page .login-box #login-form input:not(:last-child) {
+        width: 344px;
+        height: 48px;
+        background: transparent;
+        color: #252826;
+        outline: 0;
+        border: 1px solid #e0e4e7;
+        text-indent: 24px; }
+      section.login-page .login-box #login-form input::placeholder {
+        text-transform: capitalize;
+        color: #e0e4e7;
+        font: 300 17px "Fira Sans"; }
+      section.login-page .login-box #login-form input[type="submit"] {
+        width: 105px;
+        height: 40px;
+        background-color: #4680ff;
+        -webkit-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+        -moz-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+        -o-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+        -ms-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out; }
+        section.login-page .login-box #login-form input[type="submit"]:hover {
+          background-color: #252826;
+          -webkit-box-shadow: 0 9px 13px 0 rgba(37, 40, 38, 0.6);
+          -moz-box-shadow: 0 9px 13px 0 rgba(37, 40, 38, 0.6);
+          -o-box-shadow: 0 9px 13px 0 rgba(37, 40, 38, 0.6);
+          -ms-box-shadow: 0 9px 13px 0 rgba(37, 40, 38, 0.6); }
+    section.login-page .login-box #login-form p {
+      margin-top: 10px;
+      text-transform: capitalize;
+      color: #fb617f;
+      font: 300 16px "Fira Sans";
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out; }
+  section.login-page img#login-photo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 769px; }
+
+/*End*/
+/*=== Start Header ===*/
+header {
+  height: 54px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+  -moz-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+  -o-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+  -ms-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6); }
+  header section.left-box {
+    float: left; }
+    header section.left-box .logo {
+      float: left;
+      line-height: 54px; }
+    header section.left-box .search {
+      line-height: 54px;
+      margin-left: 158px; }
+      header section.left-box .search form {
+        height: 100%;
+        display: inline-block; }
+        header section.left-box .search form input {
+          width: 300px;
+          background: none;
+          text-transform: none;
+          color: #252826;
+          font: 300 16px "Fira Sans";
+          font-style: italic;
+          outline: 0;
+          border: 0;
+          text-indent: 10px; }
+  header section.right-box {
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+                       /* Float Is Optional, 
+If the flexbox is not compatible with the browser*/ }
+    header section.right-box .user-box {
+      margin-top: 11px;
+      display: inherit;
+      align-items: center; }
+      header section.right-box .user-box .photo-box {
+        width: 35px;
+        heighT: 35px;
+        background-color: #e0e4e7;
+        display: inline-block; }
+        header section.right-box .user-box .photo-box img {
+          width: 100%;
+          height: 100%; }
+      header section.right-box .user-box span {
+        margin-left: 18px;
+        text-transform: capitalize;
+        color: #a5a5a5;
+        font: 400 15px "Fira Sans"; }
+    header section.right-box .menu-box {
+      position: relative; }
+      header section.right-box .menu-box img {
+        margin: 6px 0 0 80px;
+        cursor: pointer; }
+      header section.right-box .menu-box .logout {
+        width: 100px;
+        height: 50px;
+        background-color: #fff;
+        color: #252826;
+        text-align: center;
+        font: 16px/50px 'Fira Sans';
+        -webkit-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+        -moz-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+        -o-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+        -ms-box-shadow: 0 0px 10px 0px rgba(211, 211, 211, 0.6);
+        -webkit-transition: 0.4s ease-in-out;
+        -moz-transition: 0.4s ease-in-out;
+        -o-transition: 0.4s ease-in-out;
+        -ms-transition: 0.4s ease-in-out;
+        position: absolute;
+        top: -100px;
+        right: 0; }
+        header section.right-box .menu-box .logout:hover {
+          color: #fff;
+          background-color: #252826; }
+      header section.right-box .menu-box:hover .logout {
+        top: 45px; }
+
+/*End*/
+/*=== Start Content ===*/
+section.content {
+  margin-top: 30px; }
+  section.content .emp-list .title-box .icon-box {
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+    border-radius: 3px;
+    background-color: #4680ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    -webkit-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -moz-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -o-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -ms-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7); }
+  section.content .emp-list .title-box h2 {
+    margin-bottom: 2px;
+    text-transform: capitalize;
+    color: #252826;
+    font: 500 18px "Fira Sans"; }
+  section.content .emp-list .title-box p {
+    text-transform: capitalize;
+    color: #a5a5a5;
+    font: 400 14px "Fira Sans"; }
+  section.content .emp-list ul {
+    margin-top: 30px;
+    padding: 0;
+    list-style: none; }
+    section.content .emp-list ul li {
+      position: relative;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 3px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease; }
+      section.content .emp-list ul li span {
+        width: 85%;
+        display: inline-block;
+        white-space: pre-wrap;
+        text-overflow: ellipsis;
+        line-height: 1.6 !important;
+        overflow: hidden;
+        text-transform: capitalize;
+        color: #252826;
+        font: 300 20px "Fira Sans"; }
+      section.content .emp-list ul li .emp-del {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px; }
+    section.content .emp-list ul li {
+      margin-bottom: 30px;
+      border-bottom: 3px solid #e0e4e7;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -webkit-box-shadow: 0 1px 3px 0 #e9e9ed;
+      -moz-box-shadow: 0 1px 3px 0 #e9e9ed;
+      -o-box-shadow: 0 1px 3px 0 #e9e9ed;
+      -ms-box-shadow: 0 1px 3px 0 #e9e9ed; }
+      section.content .emp-list ul li:hover {
+        border-color: #4680ff; }
+      section.content .emp-list ul li .icon-tools {
+        margin-top: 22px; }
+        section.content .emp-list ul li .icon-tools i {
+          margin-left: 13px;
+          font-size: 15px;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          cursor: pointer; }
+  section.content .emp-list .add-box {
+    margin: 30px 0;
+    background-color: #4680ff;
+    -webkit-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+    -moz-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+    -o-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6);
+    -ms-box-shadow: 0 9px 13px 0 rgba(70, 128, 255, 0.6); }
+    section.content .emp-list .add-box h2 {
+      text-transform: capitalize;
+      color: #fff;
+      font: 300 18px "Fira Sans"; }
+    section.content .emp-list .add-box form input[type="text"] {
+      width: 323px;
+      height: 35px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      outline: 0;
+      border: 0;
+      text-indent: 20px;
+      text-transform: none;
+      color: #252826;
+      font: 300 14px "Fira Sans"; }
+      section.content .emp-list .add-box form input[type="text"]::placeholder {
+        text-transform: none;
+        color: #e0e4e7;
+        font: 300 14px "Fira Sans"; }
+    section.content .emp-list .add-box form input[type="submit"] {
+      position: relative;
+      top: 7px;
+      left: -4px;
+      width: 57px;
+      height: 35px;
+      line-height: 35px;
+      background-color: #252826;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      cursor: pointer;
+      outline: 0;
+      border: 0;
+      text-transform: none;
+      color: #1cdd80;
+      font: 500 30px "Fira Sans"; }
+  section.content .emp-fav .title-box .icon-box {
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+    border-radius: 3px;
+    background-color: #4680ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    -webkit-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -moz-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -o-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -ms-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7); }
+  section.content .emp-fav .title-box h2 {
+    margin-bottom: 2px;
+    text-transform: capitalize;
+    color: #252826;
+    font: 500 18px "Fira Sans"; }
+  section.content .emp-fav .title-box p {
+    text-transform: capitalize;
+    color: #a5a5a5;
+    font: 400 14px "Fira Sans"; }
+  section.content .emp-fav .fav-list {
+    height: 171px;
+    background-color: #fff;
+    overflow-y: auto;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #e0e4e7;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -webkit-box-shadow: 0 1px 3px 0 #e9e9ed;
+    -moz-box-shadow: 0 1px 3px 0 #e9e9ed;
+    -o-box-shadow: 0 1px 3px 0 #e9e9ed;
+    -ms-box-shadow: 0 1px 3px 0 #e9e9ed;
+    margin-top: 30px;
+    padding: 0;
+    list-style: none; }
+    section.content .emp-fav .fav-list:hover {
+      border-color: #1cdd80; }
+    section.content .emp-fav .fav-list li {
+      position: relative;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 3px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease; }
+      section.content .emp-fav .fav-list li span {
+        width: 85%;
+        display: inline-block;
+        white-space: pre-wrap;
+        text-overflow: ellipsis;
+        line-height: 1.6 !important;
+        overflow: hidden;
+        text-transform: capitalize;
+        color: #252826;
+        font: 300 20px "Fira Sans"; }
+      section.content .emp-fav .fav-list li .emp-del {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px; }
+  section.content .color-box .title-box .icon-box {
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+    border-radius: 3px;
+    background-color: #4680ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    -webkit-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -moz-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -o-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7);
+    -ms-box-shadow: 0 9px 23px 0 rgba(70, 128, 255, 0.7); }
+  section.content .color-box .title-box h2 {
+    margin-bottom: 2px;
+    text-transform: capitalize;
+    color: #252826;
+    font: 500 18px "Fira Sans"; }
+  section.content .color-box .title-box p {
+    text-transform: capitalize;
+    color: #a5a5a5;
+    font: 400 14px "Fira Sans"; }
+  section.content .color-box .control-box {
+    margin: 30px 0 50px 0;
+    background-color: #252826; }
+    section.content .color-box .control-box h2 {
+      margin-bottom: 40px;
+      text-transform: capitalize;
+      color: #fff;
+      font: 300 20px "Fira Sans"; }
+    section.content .color-box .control-box .edit-box label {
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      color: #a5a5a5;
+      font: 300 14px "Fira Sans"; }
+    section.content .color-box .control-box .edit-box div input {
+      height: 34px;
+      text-transform: capitalize;
+      color: #e0e4e7;
+      font: 300 14px "Fira Sans";
+      outline: 0;
+      border: 1px solid #fff;
+      text-indent: 20px;
+      background: 0; }
+      section.content .color-box .control-box .edit-box div input::placeholder {
+        text-transform: capitalize;
+        color: #e0e4e7;
+        font: 300 14px "Fira Sans"; }
+    section.content .color-box .control-box .edit-box div:first-Child {
+      margin-right: 77px; }
+      section.content .color-box .control-box .edit-box div:first-Child input {
+        width: 50px; }
+    section.content .color-box .control-box .edit-box div:last-Child input {
+      width: 235px; }
+
+.red {
+  color: #fb617f; }
+
+.black {
+  color: #252826; }
+
+/*End*/
+
+/*# sourceMappingURL=styles.css.map */

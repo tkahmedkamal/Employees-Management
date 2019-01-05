@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Ahmed Kamal Mohammed" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>employess management</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/media.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="shortcut icon" type="image/png" href="image/favicon.png" />
+    </head>
+    <body>
+
+        <!--===  Start Login Page ===-->
+        <section class="login-page">
+            <section class="container">
+                <img src=image/login-photo.png alt="Responsive image" id="login-photo" />
+                <!-- Login Box -->
+                <section class="login-box">
+                    <!-- Name And Logo -->
+                    <section class="nameLogo-group">
+                        <img src=image/login-logo.png alt="login logo" />
+                        <h1>employee management</h1>
+                    </section>
+                    <!-- Form -->
+                    <form id="login-form">
+                        <input type="text" name="username" placeholder="username" />
+                        <p id="user-error"></p>
+                        <input type="password" name="pass" placeholder="password" />
+                        <p id="pass-error"></p>
+                        <input type="submit" value="login" />
+                    </form>
+                </section>
+            </section>
+        </section>
+        <!-- End -->  
+
+
+
+        <!--=== Start Header ===-->
+        <header>
+            <section class="container">
+                <section class="left-box">
+                    <!-- Logo -->
+                    <section class="logo">
+                        <img src=image/em-logo.png alt="em logo" />
+                    </section>
+                    <!-- Search -->
+                    <section class="search">
+                        <img src=image/search-icon.png alt="search icon" />
+                        <form>
+                            <input type="search" name="search" placeholder="search ...." id="input_search"/>
+                        </form>
+                    </section>
+                </section>
+                <!-- Right Box -->
+                <section class="right-box">
+                    <!-- User -->
+                    <section class="user-box">
+                        <section class="photo-box">
+                            <img src=image/user-icon.png alt="user icon" />
+                        </section>
+                        <span>hi, ahmed k.</span>
+                    </section>
+                    <!-- Menu -->
+                    <section class="menu-box">
+                        <img src=image/menu.png alt="menu icon"/>
+                        <section class="logout">
+                            <p>logout</p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </header>
+        <!-- End -->
+
+
+
+        <!--=== Start Content ===-->
+        <section class="content">
+            <section class="container">
+                <div class="row">
+                    <section class="col-md-5">
+                        <section class="emp-list">
+                            <!-- Title -->
+                            <section class="title-box">
+                                <section class="icon-box">
+                                    <img src=image/em-list-icon.png
+                                    alt="employees list icon"/>
+                                </section>
+                                <h2>employees list</h2>
+                                <p>dashboard</p>
+                            </section>
+                            <!-- List -->
+                            <ul class="em-add-list">
+                                <li>
+                                    <span class="emp-txt">ahmed kamal mohammed</span>
+                                    <img class="emp-del" src=image/delete-icon.png
+                                    alt="delete icon"/>
+                                    <section class="icon-tools">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <i class="fas fa-pen"></i>
+                                    </section>
+                                </li>
+                                <li>
+                                    <span class="emp-txt">jana wael elsaid</span>
+                                    <img class="emp-del" src=image/delete-icon.png
+                                    alt="delete icon"/>
+                                    <section class="icon-tools">
+                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <i class="fas fa-pen"></i>
+                                    </section>
+                                </li>
+                            </ul>
+                            <!-- Add Section -->
+                            <section class="add-box">
+                                <h2>Add An Employee To The List</h2>
+                                <form id="add-item">
+                                    <input type="text" name="add-emp" placeholder="Employee's Name" />
+                                    <input type="submit" name="submit" value="+" />
+                                </form>
+                            </section>
+                        </section>
+                    </section>
+                    <!-- #2 -->
+                    <section class="col-md-1"></section>
+                    <!-- Favorite -->
+                    <section class="col-lg-5 col-md-6">
+                        <!-- Emp Favorite -->
+                        <section class="emp-fav">
+                            <!-- Title -->
+                            <section class="title-box">
+                                <section class="icon-box">
+                                    <img src=image/star-icon.png
+                                    alt="Star icon"/>
+                                </section>
+                                <h2>favorite employees</h2>
+                                <p>dashboard</p>
+                            </section>
+                            <!-- List -->
+                            <ul class="fav-list"></ul>
+                        </section>
+                        <!-- Color box -->
+                        <section class="color-box">
+                            <!-- Title -->
+                            <section class="title-box">
+                                <section class="icon-box">
+                                    <img src=image/color-icon.png
+                                    alt="color icon"/>
+                                </section>
+                                <h2>color section - employees</h2>
+                                <p>dashboard</p>
+                            </section>
+                            <!-- Control-box -->
+                            <section class="control-box">
+                                <h2>add colors to employees</h2>
+                                <section class="edit-box">
+                                    <div>
+                                        <label>emp index</label>
+                                        <input type="text" name="num-index" placeholder="#" id="index_emp"/>
+                                    </div>
+                                    <div>
+                                        <label>Color Hex - Color Codes</label>
+                                        <input type="text" name="color hex" placeholder="Ex: #0000" id="input_color" />
+                                    </div>
+                                </secti>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </section>
+    <!-- End -->
+
+
+    <!--=== Javascript ===-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

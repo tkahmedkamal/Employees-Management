@@ -1,0 +1,164 @@
+/* Start Login Page
+----------------------------------*/
+@media(max-width: 1199px) {
+    section {
+        &.login-page {
+            img {
+                &#login-photo {
+                    right: -250px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 991px) {
+    section {
+        &.login-page {
+            img {
+                &#login-photo {
+                    right: -350px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    section {
+        &.login-page {
+            .login-box {
+                margin: 176px auto 0 auto;
+                .nameLogo-group {
+                    width: auto;
+                }
+                #login-form {
+                    input {
+                        margin: 25px auto 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+/*End*/
+
+
+/* Start Header
+----------------------------------*/
+@media(max-width: 991px) {
+    header {
+        section {
+            &.left-box {
+                .search {
+                    form {
+                        input {width: 200px}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    header {
+        section {
+            // Left Box
+            &.left-box {
+                .search {margin-left: 100px}
+            }
+            // Right Box
+            &.right-box {
+                .user-box {
+                    span {display: none}
+                }
+                .menu-box {
+                    img {margin-left: 30px}
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 456px) {
+    header {
+        section {
+            // Left Box
+            &.left-box {
+                .search {margin-left: 80px}
+            }
+        }
+    }
+}
+/*End*/
+
+
+/* Start Content
+----------------------------------*/
+@media(max-width: 1199px) {
+    section {
+        &.content {
+            // Emp List
+            .emp-list {
+                .add-box {
+                    form {
+                        input[type="text"] {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+            // Color Box
+            .color-box {
+                .control-box {
+                    .edit-box {
+                        div:first-Child {
+                            margin-right: 66px;
+                        }
+                        div:last-Child {
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) and (min-width: 768px) {
+    %prop {
+        width: 100%;
+        border-radius: 3px !important; 
+    }
+    section {
+        &.content {
+            // emp List
+            .emp-list {
+                .add-box {
+                    form {
+                        input[type="text"] {
+                            @extend %prop;
+                        }
+                        input[type="submit"] {
+                            @extend %prop;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            // Color Box
+            .color-box {
+                .control-box {
+                    .edit-box {
+                        div:last-Child {
+                            input {
+                                @extend %prop;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*End*/

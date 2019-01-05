@@ -1,0 +1,387 @@
+/*=== Import Files ===*/
+@import '_color';
+@import '_mixin';
+@import '_each';
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500');
+/*End*/
+
+
+/*=== Start Scrollbar ===*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4680ff; 
+}
+/*End*/
+
+
+/*=== Start Body ===*/
+body {
+    position: relative;
+}
+@if $bgColor == #f6f7fb {
+    body {
+        background-color: $bgColor;
+        overflow: hidden;
+    }
+    
+} @else {
+    body {
+        background-color: $redColor !important;
+        display: none;
+    }
+}
+/*End*/
+
+
+/*=== Start Extend ===*/
+.disFlex {
+    display: flex;
+}
+.paddingProp {
+    padding: 30px;
+}
+%overflow {
+    overflow: hidden;
+}
+%borderRadius {
+    border-radius: 3px;
+}
+%color {
+    color: $gray_1;
+}
+.cursor {
+    cursor: pointer;
+}
+/*End*/
+
+
+/*=== Start Login Page ===*/
+section {
+
+    &.login-page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $bgColor;
+        z-index: 9999;
+        .login-box {
+            margin-top: 176px;
+            .nameLogo-group {
+                width: 293px;
+                text-align: center;
+                h1 {
+                    margin-top: 27px;
+                    @include text(uppercase,#626262, 300 25px 'Fira Sans');
+                }
+            }
+            #login-form {
+                input {
+                    display: block;
+                    margin-top: 25px; 
+                    @extend %borderRadius;
+                    @include prop_input(1px solid transparent);
+                    @include text(none,$whiteColor, 300 16px 'Fira Sans');
+                    &:not(:last-child) {
+                        width: 344px;
+                        height: 48px;
+                        background: transparent;
+                        color: $blackColor;
+                        @include prop_input(1px solid #e0e4e7) {
+                            text-indent: 24px;
+                        }
+                    }
+                    &::placeholder {
+                        @include text(capitalize,#e0e4e7, 300 17px 'Fira Sans');
+                    }
+                    &[type="submit"] {
+                        width: 105px;
+                        height: 40px;
+                        background-color: $mainColor;
+                        @extend .cursor;
+                        @include prefix(box-shadow, 0 9px 13px 0 rgba(70, 128, 255, 0.6), webkit moz o ms);
+                        @include prefix(transition, all .3s ease-in-out, webkit moz o ms);
+                        &:hover {
+                            background-color: $blackColor;
+                            @include prefix(box-shadow, 0 9px 13px 0 rgba(37, 40, 38,0.6), webkit moz o ms);
+
+                        }
+                    }
+                }
+                p {
+                    margin-top: 10px;
+                    @include text(capitalize,$redColor, 300 16px 'Fira Sans');
+                    @include prefix(transition, all .3s ease-in-out, webkit moz o ms);
+                }
+            }
+        }
+        img {
+            &#login-photo {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 769px;
+            }
+        }
+    }
+}
+/*End*/
+
+
+/*=== Start Header ===*/
+header{
+    height: 54px;
+    background-color: $whiteColor;
+    @include prefix(box-shadow, 0 0px 10px 0px rgba(211, 211, 211, 0.6), webkit moz o ms);
+    section {
+        //! Seaction.Left Box
+        &.left-box {
+            @include float(left);
+            .logo {
+                @include float(left);
+                @include line_height;
+            }
+            .search {
+                @include line_height;
+                form {
+                    height: 100%;
+                    display: inline-block;
+                    input {
+                        width: 300px;
+                        background: none;
+                        @include text(none,$blackColor, 300 16px 'Fira Sans') {
+                            font-style: italic;
+                        }
+                        @include prop_input(0) {
+                            text-indent: 10px;
+                        }
+                        &::placeholder {
+                            @extend %color;
+                        }
+                    }
+                }
+                margin-left: 158px;
+            }
+        }
+        //! Seaction.Right Box
+        &.right-box {
+            @extend .disFlex;
+            justify-content: flex-end;
+            align-items: center;
+            @include float(right); /* Float Is Optional, 
+            If the flexbox is not compatible with the browser*/
+            .user-box {
+                margin-top: 11px;
+                display: inherit;
+                align-items: center;
+                .photo-box {
+                    width: 35px;
+                    heighT: 35px;
+                    background-color: $gray_1; //* Defaulte Color
+                    display: inline-block;
+                    @extend %overflow;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                span {
+                    margin-left: 18px;
+                    @include text(capitalize, $gray_2, 400 15px 'Fira Sans');
+                }
+            }
+            .menu-box {
+                position: relative;
+                img {
+                    margin: 6px 0 0 80px;
+                    @include curPointer;
+                }
+                .logout {
+                    width: 100px;
+                    height: 50px;
+                    background-color: $whiteColor;
+                    color: $blackColor;
+                    text-align: center;
+                    font: 16px/50px 'Fira Sans';
+                    @extend .cursor;
+                    @include prefix(box-shadow, 0 0px 10px 0px rgba(211, 211, 211, 0.6), webkit moz o ms);
+                    @include prefix(transition, .4s ease-in-out, webkit moz o ms);                
+                    @include pos(absolute, -100px, 0);
+                    &:hover {
+                        color: $whiteColor;
+                        background-color: $blackColor;
+                    }
+                }
+                &:hover {
+                    .logout {
+                        top: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*End*/
+
+
+/*=== Start Content ===*/
+section {
+    &.content {
+        $margin: 30px !global;
+        margin-top: $margin;
+        .emp-list {
+            //! Title Box
+            .title-box {
+                @include title-box;
+            }
+
+            //! List Box
+            ul {
+                @include ulList;
+                li {
+                    &:hover {
+                        border-color: $mainColor;
+                    }
+                    @include ulOrdLi;
+                    .icon-tools {
+                        margin-top: 22px;
+                        @extend %color;
+                        i {
+                            margin-left: 13px;
+                            font-size: 15px;
+                            @include prefix(transition, all .4s ease, webkit moz o ms);
+                            @include curPointer;
+                        }
+                    }
+                }
+            }
+
+            //! Add Box 
+            .add-box {
+                margin: 30px 0;
+                background-color: $mainColor;
+                @extend .paddingProp;
+                @extend %borderRadius;
+                @extend %overflow;
+                @include prefix(box-shadow, 0 9px 13px 0 rgba(70, 128, 255, 0.6), webkit moz o ms);
+                h2 {
+                    @include text(capitalize, $whiteColor, 300 18px 'Fira Sans');
+                }
+                form {
+                    input {
+                        &[type="text"] {
+                            width: 323px;
+                            height: 35px;
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                            @include prop_input(0) {
+                                text-indent: 20px;
+                                @include text(none, $blackColor, 300 14px 'Fira Sans');
+                            }
+                            &::placeholder {
+                                @include text(none, $gray_1, 300 14px 'Fira Sans');
+                            }
+                        }
+                        &[type="submit"] {
+                            position: relative;
+                            top: 7px;
+                            left: -4px;
+                            width: 57px;
+                            height: 35px;
+                            line-height: 35px;
+                            background-color: $blackColor;
+                            border-top-right-radius: 3px;
+                            border-bottom-right-radius: 3px;
+                            @include curPointer;
+                            @include prop_input(0) {
+                                @include text(none, $greenColor, 500 30px 'Fira Sans');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //! Emp Favorite
+        .emp-fav {
+            .title-box {
+                @include title-box;
+            }
+            .fav-list {
+                height: 171px;
+                background-color: $whiteColor;
+                overflow-y: auto;
+                &:hover {
+                    border-color: $greenColor;
+                }
+                @include ulOrdLi;
+                @include ulList;
+            }
+        }
+
+        //! Color Box
+        .color-box {
+            @extend %overflow;
+            .title-box {
+                @include title-box;
+            }
+            .control-box {
+                margin: 30px 0 50px 0;
+                background-color: $blackColor;
+                @extend .paddingProp;
+                @extend %borderRadius;
+                h2 {
+                    margin-bottom: 40px;
+                    @include text(capitalize, $whiteColor, 300 20px 'Fira Sans');
+                }
+                .edit-box {
+                    @extend .disFlex; 
+                    label {
+                        margin-bottom: 10px;
+                        @include text(capitalize, $gray_2, 300 14px 'Fira Sans');
+                    }
+                    div {
+                        input {
+                            height: 34px;
+                            @extend %borderRadius;
+                            &::placeholder {
+                                @include text(capitalize, #e0e4e7, 300 14px 'Fira Sans');
+                            }
+                            @include text(capitalize, #e0e4e7, 300 14px 'Fira Sans');
+                            @include prop_input(1px solid $whiteColor) {
+                                text-indent: 20px;
+                                background: 0;
+                            }
+                        }
+                        &:first-Child {
+                            margin-right: 77px;
+                            input {
+                                width: 50px;
+                            }
+                        }
+                        &:last-Child {
+                            input {
+                                width: 235px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.red {
+    color: $redColor;
+}
+.black {
+    color: $blackColor;
+}
+/*End*/

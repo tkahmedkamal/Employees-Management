@@ -1,0 +1,15 @@
+/* Start I Tag Hover
+----------------------------------*/
+@each $icon,$color in 
+    (fa-heart, $redColor),
+    (fa-exclamation-triangle, orange),
+    (fa-pen, $mainColor) {
+        i.#{$icon} {
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+/*End*/
+
+

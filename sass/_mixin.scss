@@ -1,0 +1,123 @@
+/* Start Prefix Mixin
+----------------------------------*/
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+}
+/*End*/
+
+
+/* Start Line Hight
+----------------------------------*/
+@mixin line_height {
+    line-height: 54px;
+}
+/*End*/
+
+
+/* Start Prop - Input
+----------------------------------*/
+@mixin prop_input($value: 1px solid black /* default Value */) {
+    outline: 0;
+    border: $value;
+    @content;
+}
+/*End*/
+
+
+/* Cursor Pointer
+----------------------------------*/
+@mixin curPointer{
+    cursor: pointer;
+}
+/*End*/
+
+
+/* Float Pointer
+----------------------------------*/
+@mixin float($value) {
+    float: $value;
+}
+/*End*/
+
+
+/* Fonts Pointer
+----------------------------------*/
+@mixin text($textTransform, $color, $font) {
+    text-transform: $textTransform;
+    color: $color;
+    font: $font;
+    @content;
+}
+/*End*/
+
+
+/* Position Pointer
+----------------------------------*/
+@mixin pos($pos, $top, $right) {
+    position: $pos;
+    top: $top;
+    right: $right;
+}
+/*End*/
+
+
+/* Special Mixin - Icon Box And 
+Ul Box - (emp-list - emp-fav)
+----------------------------------*/
+@mixin title-box { 
+    .icon-box {
+        width: 34px;
+        height: 34px;
+        margin-right: 20px;
+        border-radius: 3px;
+        background-color: $mainColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        @include prefix(box-shadow, 0 9px 23px 0 rgba(70, 128, 255, 0.7), webkit moz o ms);
+    }
+    h2 {
+        margin-bottom: 2px;
+        @include text(capitalize, $blackColor, 500 18px 'Fira Sans');
+    }
+    p {
+        @include text(capitalize, $gray_2, 400 14px 'Fira Sans');
+    }
+}
+
+@mixin ulList {
+        margin-top: 30px;
+        padding: 0;
+        list-style: none;
+        li {
+            position: relative;
+            background-color: $whiteColor;
+            padding: 30px;
+            border-radius: 3px;
+            @include prefix(transition, all .3s ease, webkit moz o ms);
+            span {
+                width: 85%;
+                display: inline-block;
+                white-space: pre-wrap;
+                text-overflow: ellipsis;
+                line-height: 1.6 !important;
+                overflow: hidden;
+                @include text(capitalize, $blackColor, 300 20px 'Fira Sans');
+            }
+            .emp-del {
+                @include curPointer;
+                @include pos(absolute, 30px, 30px);
+            }
+        }
+}
+
+@mixin ulOrdLi {
+    margin-bottom: 30px;
+    border-bottom: 3px solid $gray_1;
+    @include prefix(transition, all .3s ease, webkit moz o ms);
+    @include prefix(box-shadow, 0 1px 3px 0 #e9e9ed, webkit moz o ms);               
+}
+/*End*/

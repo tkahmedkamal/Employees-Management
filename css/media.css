@@ -1,0 +1,51 @@
+/* Start Login Page
+----------------------------------*/
+@media (max-width: 1199px) {
+  section.login-page img#login-photo {
+    right: -250px; } }
+@media (max-width: 991px) {
+  section.login-page img#login-photo {
+    right: -350px; } }
+@media (max-width: 767px) {
+  section.login-page .login-box {
+    margin: 176px auto 0 auto; }
+    section.login-page .login-box .nameLogo-group {
+      width: auto; }
+    section.login-page .login-box #login-form input {
+      margin: 25px auto 0 auto; } }
+/*End*/
+/* Start Header
+----------------------------------*/
+@media (max-width: 991px) {
+  header section.left-box .search form input {
+    width: 200px; } }
+@media (max-width: 767px) {
+  header section.left-box .search {
+    margin-left: 100px; }
+  header section.right-box .user-box span {
+    display: none; }
+  header section.right-box .menu-box img {
+    margin-left: 30px; } }
+@media (max-width: 456px) {
+  header section.left-box .search {
+    margin-left: 80px; } }
+/*End*/
+/* Start Content
+----------------------------------*/
+@media (max-width: 1199px) {
+  section.content .emp-list .add-box form input[type="text"] {
+    width: 80%; }
+  section.content .color-box .control-box .edit-box div:first-Child {
+    margin-right: 66px; }
+  section.content .color-box .control-box .edit-box div:last-Child input {
+    width: 100%; } }
+@media (max-width: 991px) and (min-width: 768px) {
+  section.content .emp-list .add-box form input[type="text"], section.content .emp-list .add-box form input[type="submit"], section.content .color-box .control-box .edit-box div:last-Child input {
+    width: 100%;
+    border-radius: 3px !important; }
+
+  section.content .emp-list .add-box form input[type="submit"] {
+    left: 0; } }
+/*End*/
+
+/*# sourceMappingURL=media.css.map */
